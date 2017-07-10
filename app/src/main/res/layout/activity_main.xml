@@ -4,11 +4,17 @@
 
     <data>
 
-        <import type="com.example.ashutoshtiwari.databindingsample.model.User" />
+        <import type="com.example.ashutoshtiwari.databindingsample.model.TemperatureData" />
+
+        <import type="com.example.ashutoshtiwari.databindingsample.presenter.MainActivityConract.Presenter" />
 
         <variable
-            name="user"
-            type="User" />
+            name="temperatureData"
+            type="TemperatureData" />
+
+        <variable
+            name="presenter"
+            type="Presenter" />
     </data>
 
     <LinearLayout
@@ -18,16 +24,27 @@
         tools:context="com.example.ashutoshtiwari.databindingsample.MainActivity">
 
         <TextView
-            android:id="@+id/textview_firstname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.firstName}" />
+            android:text="@{temperatureData.location}" />
 
         <TextView
-            android:id="@+id/textview_lastname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.lastName}" />
+            android:text="@{temperatureData.celsius}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:text="@={temperatureData.celsius}" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> presenter.onShowData(temperatureData)}"
+            android:text="@string/button_show_data" />
     </LinearLayout>
 </layout>
-
