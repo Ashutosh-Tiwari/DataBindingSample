@@ -46,5 +46,11 @@
             android:layout_height="wrap_content"
             android:onClick="@{() -> presenter.onShowData(temperatureData)}"
             android:text="@string/button_show_data" />
+
+        <Button
+            android:text="@string/button_items_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> presenter.showList()}"/>
     </LinearLayout>
 </layout>

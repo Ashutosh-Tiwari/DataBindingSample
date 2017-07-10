@@ -10,6 +10,7 @@ import com.example.ashutoshtiwari.databindingsample.model.TemperatureData;
 public interface MainActivityConract {
     interface Presenter {
         void onShowData(TemperatureData temperatureData);
+        void showList();
     }
 
     interface View {

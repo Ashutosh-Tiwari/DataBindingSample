@@ -1,7 +1,9 @@
 package com.example.ashutoshtiwari.databindingsample.presenter;
 
 import android.content.Context;
+import android.content.Intent;
 
+import com.example.ashutoshtiwari.databindingsample.SecondActivity;
 import com.example.ashutoshtiwari.databindingsample.model.TemperatureData;
 
 /**
@@ -22,5 +24,11 @@ public class MainActivityPresenter implements MainActivityConract.Presenter {
     @Override
     public void onShowData(TemperatureData temperatureData) {
         view.showData(temperatureData);
+    }
+
+    @Override
+    public void showList() {
+        Intent intent = new Intent(context, SecondActivity.class);
+        context.startActivity(intent);
     }
 }
