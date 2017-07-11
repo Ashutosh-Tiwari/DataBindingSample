@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityConra
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         MainActivityPresenter mainActivityPresenter = new MainActivityPresenter(this, getApplicationContext());
-        TemperatureData temperatureData = new TemperatureData("Ahmedabad - Gota", "382481");
+        TemperatureData temperatureData = new TemperatureData("Ahmedabad - Gota", "35");
         binding.setTemperatureData(temperatureData);
         binding.setPresenter(mainActivityPresenter);
     }

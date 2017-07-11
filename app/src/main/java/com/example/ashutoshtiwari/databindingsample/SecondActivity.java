@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        List<TemperatureData> items = Arrays.asList(new TemperatureData("GOTA", "382481"), new TemperatureData("Bajwa", "391310"));
+        List<TemperatureData> items = Arrays.asList(new TemperatureData("GOTA", "35"), new TemperatureData("Bajwa", "34"));
 
         adapter = new MyAdapter(items);
         recyclerView.setAdapter(adapter);
